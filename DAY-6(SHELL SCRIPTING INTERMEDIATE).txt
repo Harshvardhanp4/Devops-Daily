@@ -140,3 +140,59 @@ But write seperate best practise
 
 ----------------------------------------------------------------------------------------
 
+Checking the logfile for errors
+
+So usually the logfiles are present on another storage so
+to get them 
+
+1. curl <linkofYOURLOGFILE>: curl retrives info from internet.
+
+so now i can 
+
+curl <link> | grep ERROR 
+
+
+
+----------------------------------------------------------------------
+
+Continue commands:
+
+1. wget <link>: will download the logfile/file.
+2. curl: directly gets the info. 
+3. find: find file by:- find / -name 1.sh   
+4. sudo su - : go to root user ,  logout: to logout. sudo: substitue user do (run commands behalf root user), su- switch user 
+5. sudo find / -name pam : this allows you to execute 
+
+----------------------------------------------------------------------------------------------------------
+
+Shell Scripting for IF-ELSE 
+
+if [expression]
+then
+        sdsadsasdasd #any statements
+        asdadsasdasd #any statements
+else
+        asdasdadadsa #else statements
+        asdasdasddaad #else statements
+
+fi #ends your if loop 
+------------------------------------------------------------------------------------
+
+Shell Scripting for FOR Loop.
+
+For loop syntax for executables may change so for bash
+
+for i in {1..100}; do echo $i; done
+
+
+------------------------------------------------------------------------------------------------
+Signals notify that a particular event has occured 
+eg: kill-> sigkill etc etc 
+
+
+
+Continue commands:
+
+1. trap: allows you to trap a command etc etc(allows you to trap a particular command)
+we can set it .
+e.g: trap "echo dont use the ctrl +c" SIGINT
