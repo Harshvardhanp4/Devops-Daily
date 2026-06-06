@@ -1,0 +1,19 @@
+---------------------------------------DEVOPS DAY 4---------------------------------------
+
+A user can write a script he can make a call to AWS EC2 API and ask to create an EC2
+instance (its an automation).
+
+1. Create an api, expose the api.
+2. The api will receive the request (valid, auth, secure) then it will create an EC2 
+instance.
+3. Script
+
+-----------
+
+Script: ()
+1. BY AWS CLI   2. AWS API  3. AWS CFT(Cloud formation templates).  4. Terraform
+5. AWS CDK (Cloud dev kit).
+
+They all talk to the AWS API.
+-----------
+

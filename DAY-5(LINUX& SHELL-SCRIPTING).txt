@@ -1,0 +1,46 @@
+---------------------------------------DEVOPS DAY 5---------------------------------------
+
+Linux basic os: os establishes a connection btn h/w and s/w. Kernel is responsible for doing that os cascades the request.
+
+Why Linux: free, open source, secure, fast
+
+Architecture:     sys s/w     user process    compiler
+		 
+			System Libraries
+
+				Kernel
+
+				O/S
+
+H/W:-            CPU   RAM I/O
+
+Role of os:
+device management , memory management , process management, handling system calls
+
+
+---------------------------Fundamentals of Shell Scripting-------------------------------
+
+Shell is a way you talk to OS.
+
+Some commands we learned today 
+-------- Practical Work
+
+SHELL SCRIPTING COMMANDS:-
+1. ls: list the files and folders.
+2. pwd: present working directory.
+3. cd: change directory.
+4. cd .. : one directory behind
+5. cd ../.. : go two behind
+6. ls -ltr : provides you info (if starting with d its a directory else a file, then owner of
+file, size, timestamps)
+7. touch : create a file
+8. vi: create and write in a file (first hit esc then i to insert and :wq! to save file) 
+9. cat: print file
+10. mkdir: create directory
+11. rm: remove file  rm -r: remove directory
+12. free -g : see memory, space
+13. nproc: see how many cpu's 
+14. df -h: disk size
+15. top: memory, cpu, disk (view all details)
+
+

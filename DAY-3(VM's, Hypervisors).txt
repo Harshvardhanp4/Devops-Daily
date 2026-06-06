@@ -1,0 +1,14 @@
+---------------------------------------DEVOPS DAY 3---------------------------------------
+
+Hypervisor: S/W which can install VM's on your physical server. EG: VMWARE, XEN
+
+We do logical separation of server for eg: 1 server divided into 5 vms (for 5 teams) to 
+utilize resources efficiently.
+
+VM'S: virtual computer systems which have their own cpu memory etc..(Logical Comp Systems).
+Hypervisor deals creating of VM's. (EC2 is in general a VM)
+
+You get an IP and a key value pair.
+
+
+

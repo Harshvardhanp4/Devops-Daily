@@ -1,0 +1,24 @@
+---------------------------------------DEVOPS DAY 2---------------------------------------
+
+What is SDLC? (Software Dev. Lifecyle)?
+
+=> Set of standards to design, develop and to test (main 3 phases). End goal to deliver
+a high quality product.
+
+Planning -> Defining -> Designing -> Building/Dev ->Testing -> Deploy.
+
+
+---------------------------------------ROLES IN A COMPANY-----------------------------------
+ba, pm, po, ui/ux designer, sa, dev, dba, se, qa, devops, release m, sre, tech writer
+
+Here devops engineer: Builds CI/CD pipelines and manages environments.
+
+
+
+SDLC:- PLANNING, ANALYSIS, DESIGN, IMPLEMENTATION, TESTING & INTEGRATION, MAINTENANCE
+
+
+--------------------------------------AGILE METHODS------------------------------------------
+
+SCRUM- Teams work in sprints. Sprints: Week work (some work.)
+Sprint retrospective meeting: to track work (complete, uncomplete).

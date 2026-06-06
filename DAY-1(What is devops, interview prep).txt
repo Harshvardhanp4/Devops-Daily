@@ -1,0 +1,24 @@
+---------------------------------------DEVOPS DAY 1---------------------------------------
+
+
+1) What is Devops?
+=> Devops is a process that improves/ increases organizations ability to deliver their applications. Devops is a process of improving the application delivery.
+
+By ensuring :- 
+ 
+I. Improving delivery.
+II. Automation.
+III. Quality.
+IV. Monitoring.
+V. Testing.
+
+2) Why Devops?
+=> To deploy any application 10 y before there were sys admin, build and release engineer(BRE), server admin. (This was manual work and took a lot of days). Hence to improve
+this Devops was introduced. Devops improves efficiency by those above things.
+
+3) How to introduce myself?
+=> I am a Devops/Full Stack engineer: I am passionate about devops I have experience as a devops engineer . I worked previously as a backend engineer.
+
+Roles and Responsibilities:
+In the current org I take care of automation, I ensure quality I am maintaining for my applications, I ensure that I setup continuous monitoring, I have automated testing in this devops lifecycle.
+4) What are your day-day activities as a devops engineer?

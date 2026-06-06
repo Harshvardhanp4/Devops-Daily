@@ -1,0 +1,142 @@
+---------------------------------------DEVOPS DAY 6---------------------------------------
+
+Role of Shell Scripting in Devops: Infra maintenance, Maintain Code with GIT, Configuration management, To run scripts to monitor health.
+
+
+-------------------------------------Shell Scripting--------------------------------------
+
+
+1. touch first-shell-script.sh : shell script extension .sh
+2. man - manual for all scripts  eg: man ls suffix man command to any command
+3. ls - listing the files and folders
+4. vi - create and write in a file (first hit esc then i to insert and :wq! to save file or use shift + ZZ)
+5. when in a shell script file editing there is something called shebang
+ #!/bin/bash or #!/bin/bash/ksh  /sh
+ 
+Here bash, dash, sh, ksh are executables (all have diff syntax.)
+Difference between sh and bash :=> linking req taken by sh but taken to bash (hard linking, soft linking), but right now Ubuntu they are using dash.
+So #!/bin/sh can redirect to bash or dash but now dash mostly bash script doesn't work if redirected to dash.
+
+6. echo: to print
+
+
+-------- Practical Work-------------------------------------------------------------------
+
+SHELL SCRIPTING COMMANDS:-
+1. ls: list the files and folders.
+2. pwd: present working directory.
+3. cd: change directory.
+4. cd .. : one directory behind
+5. cd ../.. : go two behind
+6. ls -ltr : provides you info (if starting with d its a directory else a file, then owner of
+file, size, timestamps)
+7. touch : create a file
+8. vi: create and write in a file (first hit esc then i to insert and :wq! to save file)
+9. cat: print file
+10. mkdir: create directory
+11. rm: remove file  rm -rf: remove directory
+12. free -g : see memory, space
+13. nproc: see how many cpu's
+14. df -h: disk size
+15. top: memory, cpu, disk (view all details)
+16. :wq! : save
+17. :q!  : without save
+18. cat : print contents
+19. sh or ./ : to execute and ./ is for any file but sh for shell script.
+20. chmod : grants permissions (ch stands for change) it has 3 categories permissions for  root user, permissions of group, and permissions for all users
+
+1. When you want to give access to everybody chmod 777 script.sh
+
+I.   7: for myself 7: for my group 7: for all users
+II.  4: read 2: write 1: execute
+
+eg: 444 read read read only permission
+
+21. history: all commands you have entered
+22. man : manual
+
+**WROTE A SHELL SCRIPT
+
+#!/bin/bash
+set -x #debug mode this mode shows command and then the execution
+df -h
+free -g
+
+nproc
+
+23. set -x : shows you command and its execution.
+ps -ef : provides processes and -ef entire details
+ps -ef | grep "processname": provides you the running process eg: if there are
+2 amazon services running then it shows both amazon services
+
+26. | : "|" is  pipe command this sends the output of first command to the second command
+27. grep: get
+
+
+
+** WROTE A SHELL SCRIPT
+
+echo 1
+echo 11
+echo 55
+echo 99
+
+output: ./grep-1.sh | grep 1
+1
+11
+Helps you take output of first to second command.
+---
+INTERVIEW QUESTION:
+
+date | echo "Todays date is"
+So pipe command usually takes the O/P of first command to second command
+so the ans expected should be: Todays date is 12/2/2323 Like this right??
+date is a system default command (date sends info to stdin not stdout) so the output doesn't redirect.
+
+---
+
+
+Commands:
+
+awk: pattern scanning and processing language
+
+eg commmand: -
+
+ps -ef | grep amazon | awk -F" " '{print$2}'
+
+ps -ef | grep init | awk -F" " '{print$2}'
+
+use column no to find the particular field column
+
+
+------------------------------------------------------------------
+
+set -x #debug mode
+set -e 
+set -o pipefail 
+
+best practises to do while using pipe Why??
+
+set -e : exits the script when there is an error.
+set -o pipefail : exits on pipefailure
+
+
+eg: asdadsdas if this line exists in the ShellScript then set -e will catch the error 
+and stop execution
+
+but lets say:
+
+asasasad | echo 
+
+this exists then the set -o pipefail helps us point the error and stop the execution
+
+You can also write it as:
+set -exo pipefail  e: exit x: debug o: pipefail
+
+But write seperate best practise 
+
+
+
+
+----------------------------------------------------------------------------------------
+
