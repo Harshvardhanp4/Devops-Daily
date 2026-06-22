@@ -1,0 +1,33 @@
+Writing a shell script to check usage and reports and integrating
+it with cron job
+
+COMMANDS:
+
+1. aws ec2 describe-instances: this will give every information
+
+2. aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'  := jq: JSON PARSER, yq: YAML PARSER
+
+So this command means fetch me all instance id from instance list which are present in reservation list by parsing the json data
+into readable data.
+
+Cron Schedule Format: 
+
+* * * * * command
+| | | | |
+| | | | └── Day of Week (0-7)
+| | | └──── Month
+| | └────── Day of Month
+| └──────── Hour
+└────────── Minute
+
+09*** comand: every day at 9:00 am
+
+
+crontab -l: list cronjobs
+crontab -e: edit
+
+
+
+after that: sudo service cron status 
+
+sudo service cron start
