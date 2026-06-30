@@ -1,0 +1,39 @@
+---------------------------------------DEVOPS DAY 8,9---------------------------------------
+
+GIT & GITHUB -> MAIN FEATURE (VERSION CONTROL SYSTEM)
+
+1. SHARING 2. VERSIONING
+
+THERE ARE 2 VERSION CONTROL SYSTEMS:-
+
+1. CENTRALIZED:- e.g 2 devs working on a centralized server
+so dev 1 will put changes on the central server and dev2 takes change
+from central server. So it makes the central server a single point of failure.
+Server down no way to communicate or share.
+
+
+
+2. DISTRIBUTED: e.g: 2 devs working devs can create multiple copies of 
+DISTRIBUTED server (i.e git). So i.e dev can make their own copies by 
+terminology its called FORK.
+
+FORK: Create an entire copy of the original source. Thus avoiding single 
+point of failure.
+
+
+GIT VS GITHUB: 
+
+Git	                                        GitHub
+A version control system	         A cloud-based platform for hosting Git repositories
+Installed on your computer	         Accessed through a web browser or desktop app
+Tracks changes to files and code	 Provides collaboration, code review, and repository hosting
+Works offline	                     Primarily online
+
+COMMANDS:
+
+git init:      Initialize a new Git repository
+git add:       Add files to the staging area
+git commit:    Save (commit) the staged changes to repository history
+git diff:      Show differences between files/changes
+git log:      To check versioning see commits 
+git reset --hard <commit.id> : Reset the repository to a specific previous commit and discard later changes

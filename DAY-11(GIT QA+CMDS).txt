@@ -1,0 +1,79 @@
+--------------------------------------- DEVOPS DAY 11 ---------------------------------------
+
+1. git init
+   - Initializes a new Git repository.
+   - Creates the .git folder, which stores commits, branches, logs, configuration, etc.
+
+2. .git/hooks/pre-commit
+   - Used to create pre-commit hooks.
+   - Runs scripts before a commit is created (e.g., linting, testing, code formatting).
+
+3. git status
+   - Shows the current status of the repository.
+   - Displays modified, staged, and untracked files.
+
+4. git add <file> / git add .
+   - Stages files for the next commit.
+   - Moves changes to the staging area.
+
+5. git diff
+   - Shows the differences between files/changes.
+   - By default, displays unstaged changes.
+
+6. git commit -m "commit-message"
+   - Creates a new commit from the staged changes.
+   - Saves a snapshot of the project in Git history.
+
+7. git log , git log --oneline[shows in one line]
+   - Displays the commit history (version history).
+
+8. git push
+   - Uploads local commits to the remote repository.
+
+9. Daily Workflow
+   git add .
+   git commit -m "commit-message"
+   git push
+
+10. git clone <repository-url>
+    - Downloads a remote repository to your local machine.
+    - Includes the complete commit history.
+
+11. git remote -v
+    - Lists the configured remote repositories.
+    - Shows the fetch and push URLs.
+
+12. git remote add <repository-url>
+    - Adds a remote repository to the local repository.
+
+
+13. git checkout -b <branch name>
+    - Creates a remote branch and switches [if dont want to switch remove -b].
+
+
+13. git merge <branch-name>
+    - used to merge changes from one branch to another
+
+
+13. git rebase
+    - used to move or replay the commits of one branch on top of another branch, creating a linear commit history.
+
+13. git cherry-pick <commit-code>
+    - used to copy a specific commit from one branch and apply it to another branch.
+
+
+-------------------- CLONE vs FORK --------------------
+
+CLONE
+- Downloads a repository to your local machine.
+- Creates a local working copy.
+- Used when you have access to the repository.
+- Command:
+  git clone <repository-url>
+
+FORK
+- Creates your own copy of someone else's repository on GitHub.
+- The fork exists under your GitHub account.
+- Used when you don't have write access to the original repository or want to contribute independently.
+- After forking, you typically clone your fork to your local machine.
+
