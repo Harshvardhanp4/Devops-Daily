@@ -1,0 +1,160 @@
+--------------------------------------- DEVOPS DAY 13 ---------------------------------------
+
+AWS (Amazon Web Services)
+
+• AWS is the world's leading cloud computing platform.
+• AWS provides 200+ cloud services for computing, storage, networking, security, databases, machine learning, DevOps, analytics, and more.
+• AWS follows a Service Model, where each functionality is provided as a separate managed service.
+
+--------------------------------------------------------------------------------------------
+
+** IMPORTANT AWS SERVICES FOR DEVOPS **
+
+1. EC2 (Elastic Compute Cloud)
+   - Provides virtual servers (instances) in the cloud.
+   - Used to host applications, websites, databases, and services.
+   - Allows users to choose CPU, memory, storage, operating system, and networking configurations.
+
+2. VPC (Virtual Private Cloud)
+   - Creates a logically isolated private network within AWS.
+   - Allows control over IP addresses, subnets, route tables, internet gateways, NAT gateways, and security settings.
+   - Provides secure networking for AWS resources.
+
+3. Storage Services
+
+   a) EBS (Elastic Block Store)
+      - Block storage attached to EC2 instances.
+      - Similar to a hard disk/SSD.
+      - Stores operating systems, applications, and databases.
+
+   b) EFS (Elastic File System)
+      - Managed shared file storage.
+      - Multiple EC2 instances can access the same files simultaneously.
+      - Commonly used for shared application data.
+
+   c) S3 (Simple Storage Service)
+      - Object storage service.
+      - Stores files such as images, videos, backups, logs, ZIP files, and documents.
+      - Highly durable and scalable.
+
+   d) Glacier
+      - Low-cost archival storage.
+      - Used for long-term backups and data archiving.
+      - Retrieval is slower but storage is much cheaper.
+
+4. IAM (Identity and Access Management)
+   - Controls authentication and authorization.
+   - Creates Users, Groups, Roles, and Policies.
+   - Implements the Principle of Least Privilege by granting only the required permissions.
+
+5. CloudWatch
+   - AWS monitoring and observability service.
+   - Collects metrics, logs, and events from AWS resources.
+   - Creates alarms and dashboards for monitoring application and infrastructure health.
+   - Can trigger automated actions based on events.
+
+6. AWS Lambda
+
+   - Serverless compute service.
+   - Executes code only when triggered by an event.
+   - No need to provision, configure, or manage servers.
+   - AWS automatically handles scaling and infrastructure.
+
+   Common Lambda Triggers:
+   • API Gateway request
+   • S3 file upload
+   • DynamoDB stream update
+   • CloudWatch/EventBridge scheduled event
+   • SNS notification
+   • SQS message
+
+   Why is Lambda called Serverless?
+   - No EC2 instances need to be launched or maintained.
+   - AWS automatically provisions compute resources.
+   - Billing is based only on execution time and requests.
+
+7. AWS CI/CD Services
+
+   a) AWS CodeBuild
+      - Fully managed build service.
+      - Compiles source code, runs tests, and creates build artifacts.
+      - Uses a buildspec.yml file to define build commands.
+      - Can build applications, Docker images, installers, and ZIP files.
+
+   b) AWS CodePipeline
+      - Fully managed Continuous Integration and Continuous Delivery (CI/CD) service.
+      - Automates the complete software release process.
+      - Connects multiple stages such as:
+            Source → Build → Test → Approval → Deploy
+      - Integrates with GitHub, CodeCommit, CodeBuild, CodeDeploy, S3, ECS, Lambda, and other AWS services.
+
+   c) AWS CodeDeploy
+      - Fully managed deployment service.
+      - Deploys applications to:
+          • Amazon EC2
+          • AWS Lambda
+          • Amazon ECS
+          • On-premises servers
+      - Supports deployment strategies:
+          • In-place Deployment
+          • Blue/Green Deployment
+      - Supports automatic rollback if deployment fails.
+
+
+8. AWS Configuration
+
+   - Refers to configuring AWS resources, services, permissions, networking, and security according to application requirements.
+   - Includes setting up IAM Users/Roles, VPCs, Security Groups, Route Tables, EC2 instances, S3 buckets, CloudWatch, etc.
+   - Can be done manually through the AWS Console, AWS CLI, SDKs, or Infrastructure as Code (CloudFormation/Terraform).
+
+9. Billing and Costing
+
+   - AWS follows a Pay-as-you-go pricing model.
+   - You pay only for the resources you use.
+   - AWS Billing Dashboard provides cost reports and invoices.
+   - AWS Cost Explorer helps analyze spending trends.
+   - AWS Budgets allows you to set spending limits and receive alerts.
+   - AWS Pricing Calculator estimates the cost before deploying resources.
+
+10. AWS KMS (Key Management Service)
+
+   - Fully managed service for creating, storing, and managing encryption keys.
+   - Used to encrypt data stored in services like S3, EBS, RDS, and Secrets Manager.
+   - Supports automatic key rotation and fine-grained access control through IAM.
+
+11. AWS CloudTrail
+
+   - Service that enables operational auditing, governance, and compliance.
+   - Records API calls and account activity performed by users, roles, and AWS services.
+   - Helps monitor changes, investigate security incidents, and maintain audit logs.
+It records actions taken by users, roles, or AWS services as events, allowing you to monitor API calls and track changes in your AWS environment.
+
+12. Amazon EKS (Elastic Kubernetes Service)
+
+   - Fully managed Kubernetes service provided by AWS.
+   - Allows you to deploy, manage, and scale Kubernetes applications without managing the Kubernetes control plane.
+   - Supports integration with AWS networking, IAM, CloudWatch, and other AWS services.
+
+13. AWS Fargate
+
+   - Serverless compute engine for containers.
+   - Runs containers without provisioning or managing EC2 instances.
+   - Works with both Amazon ECS and Amazon EKS.
+   - You only define CPU and memory requirements, and AWS manages the infrastructure.
+
+14. Amazon ECS (Elastic Container Service)
+
+   - AWS's native container orchestration service.
+   - Used to deploy, manage, and scale Docker containers.
+   - Simpler than Kubernetes and tightly integrated with AWS services.
+   - Can run on EC2 instances or AWS Fargate.
+
+15. ELK Stack (Elasticsearch, Logstash, Kibana)
+
+   - A popular logging and monitoring stack.
+   - Elasticsearch stores and indexes logs for fast searching.
+   - Logstash collects, processes, and transforms log data.
+   - Kibana provides dashboards and visualizations for analyzing logs.
+   - Commonly used for centralized logging, monitoring, and troubleshooting.
+--------------------------------------------------------------------------------------------
+
