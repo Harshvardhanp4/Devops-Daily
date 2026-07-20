@@ -1,0 +1,229 @@
+--------------------------------------- DEVOPS DAY 14 ---------------------------------------
+
+CONFIGURATION MANAGEMENT
+
+Configuration Management is the process of maintaining servers/infrastructure in a desired and consistent state by automating tasks like:
+1. Software Installation
+2. Upgrades
+3. Security Patches
+4. Configuration Changes
+5. Service Management
+
+Instead of manually configuring every server, Configuration Management tools automate these tasks across multiple servers.
+
+--------------------------------------------------------------------------------------------
+
+**PROBLEM:
+
+Let's say there is an on-premise infrastructure consisting of 100 servers.
+
+Every server requires the following mandatory operations:
+1. Software Installation
+2. Security Patches
+3. Version Upgrades
+
+Doing these tasks manually on all 100 servers is difficult, time-consuming and prone to human errors.
+
+Initially, engineers wrote Shell Scripts to automate these tasks.
+
+However, another problem occurred:
+- Linux uses Bash commands.
+- Windows uses PowerShell.
+- Ubuntu, CentOS, RHEL etc. have different package managers and commands.
+
+So engineers had to maintain different scripts for different operating systems.
+
+Now imagine instead of 100 servers, an organization has 1000+ servers.
+
+With the advancement of Cloud Computing, the number of servers increased significantly, making manual scripting and management almost impossible.
+
+--------------------------------------------------------------------------------------------
+
+**SOLUTION:
+
+Configuration Management Tools
+
+1. Ansible
+2. Puppet
+3. Chef
+4. SaltStack
+
+These tools automate software installation, upgrades, security patches and configuration changes across multiple servers from a single machine.
+
+--------------------------------------------------------------------------------------------
+
+1. WHY ANSIBLE?
+
+-> Ansible follows a PUSH mechanism.
+
+Meaning:
+An administrator writes an Ansible Playbook on a Control Node (Laptop/EC2).
+
+Whenever the playbook is executed, Ansible connects to all target machines and pushes the required configuration.
+
+Example:
+Write one playbook →
+Execute once →
+Configuration gets updated on 10, 100 or even 1000 EC2 instances.
+
+--------------------------------------------------------------------------------------------
+
+WHY IS ANSIBLE POPULAR?
+
+-> Agentless Architecture
+No agent/software needs to be installed on managed servers.
+
+-> Inventory File
+Simply add the IP addresses or hostnames of all target machines inside the inventory file.
+
+-> Passwordless Authentication
+Linux -> SSH Keys
+Windows -> WinRM
+
+-> Supports both Linux and Windows.
+
+-> Uses YAML to write Playbooks which is easy to read and understand.
+
+-> Written in Python and custom modules can also be developed using Python.
+
+-> Easy to learn compared to Puppet and Chef.
+
+-> Cloud Agnostic
+Works with AWS, Azure, GCP or even On-Premise servers.
+
+--------------------------------------------------------------------------------------------
+
+PUSH vs PULL MECHANISM
+
+PUSH MODEL (Ansible)
+
+Control Node
+      |
+      |  Execute Playbook
+      |
+      V
+-----------------------------
+| Server 1                |
+| Server 2                |
+| Server 3                |
+| Server n                |
+-----------------------------
+
+In Push Model:
+- Administrator initiates the execution.
+- Configuration is pushed from Control Node to Managed Nodes.
+- No agent is required.
+
+Advantages:
+- Simple Architecture
+- Easy Setup
+- Less Maintenance
+- Faster execution
+
+--------------------------------------------------------------------------------------------
+
+PULL MODEL (Puppet / Chef)
+
+              Puppet/Chef Master
+                     ^
+                     |
+          Agents request configuration
+                     |
+--------------------------------------------
+| Server 1 (Agent Installed)               |
+| Server 2 (Agent Installed)               |
+| Server 3 (Agent Installed)               |
+--------------------------------------------
+
+In Pull Model:
+- Every server has an Agent installed.
+- Agents periodically contact the Master Server.
+- They pull the latest configuration automatically.
+
+Advantages:
+- Suitable for very large infrastructures.
+- Automatically keeps servers in the desired state.
+
+--------------------------------------------------------------------------------------------
+
+ANSIBLE GALAXY
+
+Ansible Galaxy is a community repository where developers can:
+- Share reusable Roles.
+- Download pre-built Roles.
+- Create and publish custom Roles.
+- Reuse automation instead of writing everything from scratch.
+
+--------------------------------------------------------------------------------------------
+
+QUESTIONS:
+
+1. Programming language Ansible uses?
+
+=> Python.
+It is written in Python and custom modules can also be created using Python.
+
+--------------------------------------------------------------------------------------------
+
+2. Does Ansible support only Linux?
+
+=> No.
+
+Linux  -> SSH
+Windows -> WinRM
+
+--------------------------------------------------------------------------------------------
+
+3. Difference between Puppet and Ansible?
+
+Ansible
+- Agentless
+- Push Model
+- Uses YAML Playbooks
+- Easy to Learn
+- Uses SSH/WinRM
+
+Puppet
+- Agent Based
+- Pull Model
+- Uses Puppet DSL
+- More Complex
+- Requires Master-Agent Architecture
+
+--------------------------------------------------------------------------------------------
+
+4. Is Ansible Push or Pull?
+
+=> Push Model.
+
+The Control Node pushes configuration to all managed machines.
+
+--------------------------------------------------------------------------------------------
+
+5. Which language is used to write Ansible Playbooks?
+
+=> YAML
+
+--------------------------------------------------------------------------------------------
+
+6. Does Ansible support all Cloud Providers?
+
+=> Yes.
+
+Ansible does not depend on the Cloud Provider.
+
+It only requires:
+- Public/Private IP Address
+- SSH enabled (Linux)
+- WinRM enabled (Windows)
+- Machine should be accessible from the Ansible Host
+
+Therefore, it can work with:
+- AWS
+- Azure
+- Google Cloud Platform (GCP)
+- DigitalOcean
+- VMware
+- On-Premise Servers
+
+--------------------------------------------------------------------------------------------
